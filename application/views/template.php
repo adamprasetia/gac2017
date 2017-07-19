@@ -16,7 +16,7 @@
   <script> var base_url = '<?php echo base_url()?>'</script>
 	<script type="text/javascript" src="<?php echo base_url('../assets/js/jquery-1.11.3.min.js')?>"/></script>
 </head>
-<body class="hold-transition skin-black sidebar-mini fixed">
+<body class="hold-transition skin-red-light sidebar-mini fixed">
   <header class="main-header">
     <?php echo anchor('home','<span class="logo-mini"><b>'.APP_NAME.'</b></span><span class="logo-lg">'.APP_NAME.'</span>',array('class'=>'logo')) ?>
     <nav class="navbar navbar-static-top" role="navigation">
@@ -94,7 +94,7 @@
   </div>
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <img src="<?php echo base_url('assets/img/logo.png') ?>" height="16px">
+      <img src="<?php echo base_url('assets/img/gac-sm-logo.png') ?>">
     </div>
     <strong>PT Data Bina Solusindo (ADirect)</strong>
   </footer>

@@ -2,10 +2,8 @@
 
 class Distribution_model extends CI_Model {
 	function distribution($interviewer,$total){
-		$this->filter();
-		$this->db->where('A.interviewer','0');
-		$this->db->limit($total);
-		$this->db->update('candidate A',array('A.interviewer'=>$interviewer,'dist_date'=>date('Y-m-d')));
+		$query = "UPDATE candidate SET dist_date = '".date('Y-m-d')."',interviewer = ".$interviewer.",dist_date_first = if(dist_date_first = '0000-00-00','".date('Y-m-d')."',dist_date_first) WHERE interviewer = 0 LIMIT ".$total;
+		$this->db->query($query);
 		return $this->db->affected_rows();
 	}	
 	function get_interviewer(){

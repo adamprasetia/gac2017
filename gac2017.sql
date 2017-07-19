@@ -10,98 +10,82 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table gac2016.call_history
+-- Dumping structure for table gac2017.call_history
 CREATE TABLE IF NOT EXISTS `call_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `candidate` int(11) NOT NULL DEFAULT '0',
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.call_history: ~0 rows (approximately)
+-- Dumping data for table gac2017.call_history: ~0 rows (approximately)
 /*!40000 ALTER TABLE `call_history` DISABLE KEYS */;
-INSERT INTO `call_history` (`id`, `candidate`, `date`, `status`) VALUES
-	(37, 4, '2016-04-13 19:28:35', 'Answer');
 /*!40000 ALTER TABLE `call_history` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.candidate
+-- Dumping structure for table gac2017.candidate
 CREATE TABLE IF NOT EXISTS `candidate` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mop_id` varchar(50) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `fullname` varchar(100) NOT NULL,
-  `nickname` varchar(100) NOT NULL,
-  `dob` date NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `tlp` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `tw` varchar(100) NOT NULL,
-  `brand` varchar(100) NOT NULL,
-  `dist_date` date NOT NULL,
-  `interviewer` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL,
-  `audit` tinyint(4) NOT NULL,
-  `valid` tinyint(4) NOT NULL,
-  `called` tinyint(4) NOT NULL,
-  `minute` tinyint(4) NOT NULL,
-  `smoker` tinyint(4) NOT NULL,
-  `callagain` tinyint(4) NOT NULL,
-  `plagiat` tinyint(4) NOT NULL,
-  `plagiat_desc` varchar(100) NOT NULL,
-  `art_title` varchar(100) NOT NULL,
-  `art_type` varchar(5) NOT NULL,
-  `art_desc` text NOT NULL,
-  `signature` tinyint(4) NOT NULL,
-  `facetoface` tinyint(4) NOT NULL,
-  `city_f2f` tinyint(4) NOT NULL,
-  `overseas` tinyint(4) NOT NULL,
-  `overseas_desc` varchar(100) NOT NULL,
-  `visa` tinyint(4) NOT NULL,
-  `visa_desc` varchar(200) NOT NULL,
-  `grandprize` tinyint(4) NOT NULL,
-  `trivia` text NOT NULL,
-  `experience` text NOT NULL,
-  `english1` text NOT NULL,
-  `english2` text NOT NULL,
-  `english3` tinyint(4) NOT NULL,
-  `english3_desc` varchar(100) NOT NULL,
-  `english4` text NOT NULL,
-  `passport` tinyint(4) NOT NULL,
-  `passport_name` varchar(100) NOT NULL,
-  `passport_exp` date NOT NULL,
-  `country` varchar(200) NOT NULL,
-  `campaign` tinyint(4) NOT NULL,
-  `campaign_desc` text NOT NULL,
-  `user_create` int(11) NOT NULL,
-  `date_create` datetime NOT NULL,
-  `user_update` int(11) NOT NULL,
-  `date_update` datetime NOT NULL,
+  `mop_id` varchar(50) NOT NULL DEFAULT '',
+  `username` varchar(100) NOT NULL DEFAULT '',
+  `fullname` varchar(100) NOT NULL DEFAULT '',
+  `nickname` varchar(100) NOT NULL DEFAULT '',
+  `dob` date NOT NULL DEFAULT '0000-00-00',
+  `city` varchar(100) NOT NULL DEFAULT '',
+  `tlp` varchar(100) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `tw` varchar(100) NOT NULL DEFAULT '',
+  `brand` varchar(100) NOT NULL DEFAULT '',
+  `dist_date` date NOT NULL DEFAULT '0000-00-00',
+  `dist_date_first` date NOT NULL DEFAULT '0000-00-00',
+  `interviewer` int(11) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `audit` tinyint(4) NOT NULL DEFAULT '0',
+  `valid` tinyint(4) NOT NULL DEFAULT '0',
+  `called` tinyint(4) NOT NULL DEFAULT '0',
+  `minute` tinyint(4) NOT NULL DEFAULT '0',
+  `smoker` tinyint(4) NOT NULL DEFAULT '0',
+  `callagain` tinyint(4) NOT NULL DEFAULT '0',
+  `plagiat` tinyint(4) NOT NULL DEFAULT '0',
+  `plagiat_desc` varchar(100) NOT NULL DEFAULT '',
+  `art_title` varchar(100) NOT NULL DEFAULT '',
+  `art_type` varchar(5) NOT NULL DEFAULT '',
+  `art_desc` text,
+  `signature` tinyint(4) NOT NULL DEFAULT '0',
+  `facetoface` tinyint(4) NOT NULL DEFAULT '0',
+  `city_f2f` tinyint(4) NOT NULL DEFAULT '0',
+  `overseas` tinyint(4) NOT NULL DEFAULT '0',
+  `overseas_desc` varchar(100) NOT NULL DEFAULT '',
+  `visa` tinyint(4) NOT NULL DEFAULT '0',
+  `visa_desc` varchar(200) NOT NULL DEFAULT '',
+  `grandprize` tinyint(4) NOT NULL DEFAULT '0',
+  `trivia` text,
+  `experience` text,
+  `english1` text,
+  `english2` text,
+  `english3` tinyint(4) NOT NULL DEFAULT '0',
+  `english3_desc` varchar(100) NOT NULL DEFAULT '',
+  `english4` text,
+  `passport` tinyint(4) NOT NULL DEFAULT '0',
+  `passport_name` varchar(100) NOT NULL DEFAULT '',
+  `passport_exp` date NOT NULL DEFAULT '0000-00-00',
+  `country` varchar(200) NOT NULL DEFAULT '',
+  `campaign` tinyint(4) NOT NULL DEFAULT '0',
+  `campaign_desc` text,
+  `user_create` int(11) NOT NULL DEFAULT '0',
+  `date_create` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_update` int(11) NOT NULL DEFAULT '0',
+  `date_update` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.candidate: ~14 rows (approximately)
+-- Dumping data for table gac2017.candidate: ~0 rows (approximately)
 /*!40000 ALTER TABLE `candidate` DISABLE KEYS */;
-INSERT INTO `candidate` (`id`, `mop_id`, `username`, `fullname`, `nickname`, `dob`, `city`, `tlp`, `email`, `tw`, `brand`, `dist_date`, `interviewer`, `status`, `audit`, `valid`, `called`, `minute`, `smoker`, `callagain`, `plagiat`, `plagiat_desc`, `art_title`, `art_type`, `art_desc`, `signature`, `facetoface`, `city_f2f`, `overseas`, `overseas_desc`, `visa`, `visa_desc`, `grandprize`, `trivia`, `experience`, `english1`, `english2`, `english3`, `english3_desc`, `english4`, `passport`, `passport_name`, `passport_exp`, `country`, `campaign`, `campaign_desc`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
-	(1, '', '', 'Adam Prasetia', 'damz', '1989-02-16', '', '083817321885', 'adam.prasetia@gmail.com', '', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-13 18:40:28', 0, '0000-00-00 00:00:00'),
-	(2, '', '', 'Teguh Santoso', 'teguh', '1987-10-04', '', '081234567876', 'teguh@adirect.web.id', '', '', '2016-07-12', 14, 22, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-13 18:40:28', 0, '0000-00-00 00:00:00'),
-	(3, '', '', 'Adam Prasetia', 'damz', '1989-02-16', '', '083817321885', 'adam.prasetia@gmail.com', '', '', '2016-07-12', 14, 21, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-13 19:09:15', 0, '0000-00-00 00:00:00'),
-	(4, '', '', 'Teguh Santoso', 'teguh', '1987-10-04', 'Jakarta', '081234567876', 'teguh@adirect.web.id', 'teguh_tw', 'A Mild', '2016-04-13', 15, 0, 0, 0, 1, 1, 1, 1, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 1, 'Teguh Santoso', '2018-02-01', '', 1, 'never say maybe', 12, '2016-04-13 19:09:15', 0, '0000-00-00 00:00:00'),
-	(5, '11111', 'adam_pras', 'Adam Prasetia', 'damz', '1989-02-16', '', '083817321885', 'adam.prasetia@gmail.com', '', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 11:59:37', 0, '0000-00-00 00:00:00'),
-	(6, '22222', 'teguh_san', 'Teguh Santoso', 'teguh', '1987-10-04', '', '081234567876', 'teguh@adirect.web.id', '', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 11:59:37', 0, '0000-00-00 00:00:00'),
-	(7, '11111', 'adam_pras', 'Adam Prasetia', 'damz', '1989-02-16', '', '083817321885', 'adam.prasetia@gmail.com', 'adam_tw', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 12:03:08', 0, '0000-00-00 00:00:00'),
-	(8, '22222', 'teguh_san', 'Teguh Santoso', 'teguh', '1987-10-04', '', '081234567876', 'teguh@adirect.web.id', 'teguh_tw', '', '2016-07-12', 14, 0, 0, 0, 1, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 12:03:08', 0, '0000-00-00 00:00:00'),
-	(9, '11111', 'adam_pras', 'Adam Prasetia', 'damz', '1989-02-16', '', '083817321885', 'adam.prasetia@gmail.com', 'adam_tw', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 22:24:33', 0, '0000-00-00 00:00:00'),
-	(10, '22222', 'teguh_san', 'Teguh Santoso', 'teguh', '1987-10-04', '', '081234567876', 'teguh@adirect.web.id', 'teguh_tw', '', '2016-07-12', 14, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-14 22:24:33', 0, '0000-00-00 00:00:00'),
-	(11, '11111', 'adam_pras', 'Adam Prasetia', 'damz', '1989-02-16', 'Cianjur', '083817321885', 'adam.prasetia@gmail.com', 'adam_tw', '', '2016-07-12', 14, 0, 0, 0, 1, 1, 1, 1, 0, '', '', 'P', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-04-18 19:29:57', 0, '0000-00-00 00:00:00'),
-	(12, '22222', 'teguh_san', 'Teguh Santoso', 'teguh', '1987-10-04', 'Jakarta', '081234567876', 'teguh@adirect.web.id', 'teguh_tw', 'A Mild', '2016-07-12', 14, 0, 0, 0, 1, 1, 1, 1, 1, 'SPG', 'Ini Judul', 'S', 'asdasdasd', 1, 1, 0, 4, 'Bangkok Thailand', 1, 'INDIA, VISA WISATA UMUM', 1, 'Semangat, lucu lucuan', '', 'rokok', 'a mild wanted', 3, 'Kompas', 'go a head people', 1, 'Adam Prasetia', '2018-02-12', 'korea utara', 1, 'A mild soundrenalin 2009', 12, '2016-04-18 19:29:57', 0, '0000-00-00 00:00:00'),
-	(13, '11111', 'adam_pras', 'Adam Prasetia', 'damz', '1989-02-16', 'Cianjur', '083817321885', 'adam.prasetia@gmail.com', 'adam_tw', 'A Mild', '2016-07-12', 14, 101, 0, 1, 1, 1, 1, 1, 1, 'SPG Cantik', 'Alamat Palsu', 'V', 'Terinspirasi dari ayu tingting 100x100, canvas, 2016', 1, 1, 2, 4, 'Arab Saudi', 1, 'JERMAN, VISA WISATA UMUM', 1, 'Semangat dong', 'experiece', 'Apa yang Anda ketahui mengenai Sampoerna A Mild', 'Apa Program dari Sampoerna A Mild yang paling Anda tahu ?', 3, 'Kompas', 'Acara-acara A Mild apa yang pernah Anda datangi ? Alasannya ?', 1, 'Adam Prasetia', '2018-02-16', 'Korea Utara, Afganistan', 1, 'Soundrenalin', 12, '2016-07-12 13:26:54', 0, '0000-00-00 00:00:00'),
-	(14, '22222', 'teguh_san', 'Teguh Santoso', 'teguh', '1987-10-04', 'Jakarta', '081234567876', 'teguh@adirect.web.id', 'teguh_tw', '', '2016-07-12', 14, 102, 0, 0, 0, 0, 0, 0, 0, '', 'Bang Jali', 'P', '', 0, 0, 0, 0, '', 0, '', 0, '', '', '', '', 0, '', '', 0, '', '0000-00-00', '', 0, '', 12, '2016-07-12 13:26:54', 0, '0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `candidate` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.candidate_status
+-- Dumping structure for table gac2017.candidate_status
 CREATE TABLE IF NOT EXISTS `candidate_status` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
@@ -113,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `candidate_status` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.candidate_status: ~15 rows (approximately)
+-- Dumping data for table gac2017.candidate_status: ~15 rows (approximately)
 /*!40000 ALTER TABLE `candidate_status` DISABLE KEYS */;
 INSERT INTO `candidate_status` (`id`, `name`, `parent`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
 	(1, 'Connect', 0, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
@@ -134,7 +118,7 @@ INSERT INTO `candidate_status` (`id`, `name`, `parent`, `user_create`, `date_cre
 /*!40000 ALTER TABLE `candidate_status` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.city
+-- Dumping structure for table gac2017.city
 CREATE TABLE IF NOT EXISTS `city` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `city` varchar(100) NOT NULL,
@@ -147,16 +131,16 @@ CREATE TABLE IF NOT EXISTS `city` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table gac2016.city: ~3 rows (approximately)
+-- Dumping data for table gac2017.city: ~3 rows (approximately)
 /*!40000 ALTER TABLE `city` DISABLE KEYS */;
 INSERT INTO `city` (`id`, `city`, `address`, `time`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
-	(1, 'Jakarta', 'ADirect Tower Jl Mampang Prapatan 8 No R25 C-D', 'Senin, 11 Juli 2016', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-	(2, 'Bandung', 'Gedung Asia Afrika No 7', 'Selasa, 12 Juli 2016', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-	(3, 'Cianjur', 'Gedung Monas Cianjurs', 'Rabu, 13 Juli 2016', 12, '2016-07-13 08:52:46', 12, '2016-07-13 08:53:00');
+	(1, 'Jakarta', 'ADirect Tower Jl Mampang Prapatan 8 No R25 C-D', 'Senin, 11 Agustus 2017', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+	(2, 'Bandung', 'Gedung Asia Afrika No 7', 'Selasa, 12 Agustus 2017', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+	(3, 'Cianjur', 'Gedung Monas Cianjurs', 'Rabu, 13 Agustus 2017', 1, '2016-07-13 08:52:46', 1, '2016-07-13 08:53:00');
 /*!40000 ALTER TABLE `city` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.user
+-- Dumping structure for table gac2017.user
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -173,22 +157,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `date_update` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.user: ~7 rows (approximately)
+-- Dumping data for table gac2017.user: ~5 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `name`, `username`, `password`, `level`, `ip_login`, `date_login`, `user_agent`, `status`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
-	(12, 'Adam Prasetia', 'damz', '202cb962ac59075b964b07152d234b70', 1, '::1', '2017-07-17 03:15:48', 'Windows 7(Google Chrome 59.0.3071.115)', 1, 0, '0000-00-00 00:00:00', 12, '2016-02-01 23:44:22'),
-	(13, 'Teguh Santoso', 'teguh', 'e2f9f842fd8e1ae90dc428d39cab7167', 1, '127.0.0.1', '2016-02-01 17:11:28', 'Windows 7(Google Chrome 48.0.2564.97)', 1, 1, '2016-02-01 17:07:02', 0, '0000-00-00 00:00:00'),
-	(14, 'Jaka', 'jack', '202cb962ac59075b964b07152d234b70', 3, '', '0000-00-00 00:00:00', '', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-	(15, 'Bhakti', 'bray', '202cb962ac59075b964b07152d234b70', 3, '', '0000-00-00 00:00:00', '', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-	(16, 'Joko', 'jojo', '202cb962ac59075b964b07152d234b70', 2, '', '0000-00-00 00:00:00', '', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
-	(17, 'Irfan Hamidal', 'irfan', '202cb962ac59075b964b07152d234b70', 3, '', '0000-00-00 00:00:00', '', 1, 0, '2016-02-04 09:33:35', 0, '0000-00-00 00:00:00'),
-	(18, 'M Suprapto', 'atoe', 'caf1a3dfb505ffed0d024130f58c5cfa', 3, '', '0000-00-00 00:00:00', '', 1, 0, '2016-02-04 09:35:32', 0, '0000-00-00 00:00:00');
+	(1, 'Adam Prasetia', 'damz', '202cb962ac59075b964b07152d234b70', 1, '::1', '2017-07-20 06:38:23', 'Windows 7(Google Chrome 59.0.3071.115)', 1, 0, '0000-00-00 00:00:00', 12, '2016-02-01 23:44:22'),
+	(2, 'Teguh Santoso', 'teguh', 'e2f9f842fd8e1ae90dc428d39cab7167', 1, '127.0.0.1', '2016-02-01 17:11:28', 'Windows 7(Google Chrome 48.0.2564.97)', 1, 1, '2016-02-01 17:07:02', 0, '0000-00-00 00:00:00'),
+	(3, 'Jaka', 'jack', '202cb962ac59075b964b07152d234b70', 3, '::1', '2017-07-20 06:05:38', 'Windows 7(Google Chrome 59.0.3071.115)', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+	(4, 'Bhakti', 'bray', '202cb962ac59075b964b07152d234b70', 3, '', '0000-00-00 00:00:00', '', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
+	(5, 'Joko', 'jojo', '202cb962ac59075b964b07152d234b70', 2, '', '0000-00-00 00:00:00', '', 1, 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.user_level
+-- Dumping structure for table gac2017.user_level
 CREATE TABLE IF NOT EXISTS `user_level` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -199,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `user_level` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.user_level: ~3 rows (approximately)
+-- Dumping data for table gac2017.user_level: ~3 rows (approximately)
 /*!40000 ALTER TABLE `user_level` DISABLE KEYS */;
 INSERT INTO `user_level` (`id`, `name`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
 	(1, 'Admin', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
@@ -208,7 +190,7 @@ INSERT INTO `user_level` (`id`, `name`, `user_create`, `date_create`, `user_upda
 /*!40000 ALTER TABLE `user_level` ENABLE KEYS */;
 
 
--- Dumping structure for table gac2016.user_status
+-- Dumping structure for table gac2017.user_status
 CREATE TABLE IF NOT EXISTS `user_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -219,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `user_status` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table gac2016.user_status: ~2 rows (approximately)
+-- Dumping data for table gac2017.user_status: ~2 rows (approximately)
 /*!40000 ALTER TABLE `user_status` DISABLE KEYS */;
 INSERT INTO `user_status` (`id`, `name`, `user_create`, `date_create`, `user_update`, `date_update`) VALUES
 	(1, 'Active', 0, '2015-10-31 14:00:03', 0, '2015-11-28 02:32:32'),

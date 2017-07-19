@@ -119,8 +119,17 @@
 					<h3>Jika Mas/Mbak berhasil menjawab seluruh pertanyaan dengan baik,</h3>
 					<h3>Maka Mas/Mbak akan kami hubungi kembali untuk mengabarkan apabila Mas/Mbak lolos ke tahapan seleksi berikutnya.</h3>
 					<h3>Sebelumnya, saya akan sedikit menggambarkan proses seleksi Go Ahead Challenge atau GAC. Ada 2 tahapan yaitu GAC Festival & GAC Artwarding.</h3>
-					<h3>Tahapan setelah ini adalah GAC Festival, yaitu pameran karya yang telah Mas/Mbak kirimkan & face-to-face interview, yang akan diadakan di (sebutkan kota & tanggal).</h3>
-
+					<h3>Tahapan setelah ini adalah GAC Festival, yaitu pameran karya yang telah Mas/Mbak kirimkan & face-to-face interview, yang akan diadakan di </h3>
+					<?php
+						$city_list = $this->interview_model->get_city_list();
+						if ($city_list) {
+							echo "<ul>";
+							foreach ($city_list as $row) {
+								echo "<li><h3><b>".$row->city."</b>, ".$row->time."</h3></li>";
+							}		
+							echo "</ul>";
+						}	
+					?>
 					<h3>Jika lolos maka Mas/Mbak akan disertakan dalam acara GAC Artwarding di Jakarta tanggal 3 Des 2017, dimana Mas/Mbak berkesempatan membuat karya kolaboratif dengan para ahli di bidangnya. Selanjutnya akan dipilih pemenang berdasarkan karya terbaik yang berkesempatan pergi & berkarya di Amerika Serikat selama 1 sampai 3 minggu.</h3>					
 					<h3>Apakah Mas/Mbak keberatan atau berhalangan ?</h3>
 					<div class="radio">
@@ -555,6 +564,7 @@
 								</td>
 							</tr>
 						</table>		
+						<small>Note : Nama di database = <b><?php echo $candidate->fullname ?></b></small>
 					</div>			
 				</div>			
 				<div class="box box-country">
@@ -603,6 +613,11 @@
 					</div>			
 				</div>
 			</div>
+			<div class="box box-status">
+				<div class="box-body form-inline">
+					<button class="btn btn-success btn-sm" type="submit" onclick="return confirm('Are you sure')"><span class="glyphicon glyphicon-save"></span> Save</button>
+				</div>	
+			</div>				
 		</div>
 		<?php echo form_close() ?>
 		<div class="col-md-4 col-sm-4">

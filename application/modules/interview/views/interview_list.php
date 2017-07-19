@@ -21,7 +21,7 @@
 			<div class="form-group">
 				<?php echo form_dropdown('status',$this->interview_model->status_dropdown(),$this->input->get('status'),'class="form-control input-sm" onchange="submit()"')?>
 			</div>
-			<div class="form-group">
+			<div class="form-group <?php echo ($this->user_login['level']==3?'hide':'') ?>">
 				<?php echo form_dropdown('interviewer',$this->interview_model->interviewer_dropdown(),$this->input->get('interviewer'),'class="form-control input-sm" onchange="submit()"')?>
 			</div>
 			<div class="form-group">
