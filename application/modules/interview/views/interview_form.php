@@ -198,13 +198,15 @@
 					</table>
 					<h4><b>Sebelumnya kami beritahukan bahwa seluruh pembicaraan yang terjadi di telepon ini akan direkam untuk selanjutnya kami jadikan bahan pertimbangan dalam proses pemilihan pemenang.</b></h4>
 					<h4>Perlu kami informasikan bahwa pertanyaan-pertanyaan yang akan kami berikan setelah ini akan lebih menggali informasi lebih jauh mengenai anda.</h4>
-					<h4>Pertanyaannya akan dibagi menjadi 4 fokus observasi, </h4>
+
+<!-- 					<h4>Pertanyaannya akan dibagi menjadi 4 fokus observasi, </h4>
 					<ul>
 						<li><h4>Validation (Keaslian & keabsahan karya yang sudah di submit),</h4></li>
 						<li><h4>Availability (Kesediaan untuk mengikuti proses selanjutnya & untuk pergi ke luar negeri),</h4></li>
 						<li><h4>Interest (Minat serta apa yang akan mereka lakukan apabila memenangkan grand prize)</h4></li>
 						<li><h4>Serta English Proficiency (kelancaran berkomunikasi dalam bahasa Inggris)</h4></li>
 					</ul>
+ -->					
 				</div>				
 			</div>
 			<div class="box-tanya-jawab-1 hide">
