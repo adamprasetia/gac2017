@@ -600,9 +600,38 @@
 						</div>				
 					</div>				
 					<div class="box-footer box-campaign-ya hide">
-						<h3>Tolong sebutkan nama campaign Sampoerna A Mild yang sudah pernah anda ikuti beserta tahun keikutsertaan anda :</h3>
+						<h2>Tolong sebutkan nama campaign Sampoerna A Mild yang sudah pernah anda ikuti beserta tahun keikutsertaan anda :</h3>
 						<textarea name="campaign_desc" rows="5" autocomplete="off" class="form-control input-sm"><?php echo (isset($candidate->campaign_desc)?$candidate->campaign_desc:'') ?></textarea>
-						<small>(Mohon sebutkan nama campaign, waktu campaign berlangsung dan sudah sampai level mana)</small>
+						<p>(Mohon sebutkan nama campaign, waktu campaign berlangsung dan sudah sampai level mana)</p>
+						<small>
+						<div class="row">
+							<div class="col-md-6">
+								<p>Contoh Campaign :</p>
+								<ul>
+									<li>Marlboro Red Racing</li>
+									<li>Marlboro Red Rush</li>
+									<li>Marlboro Connection</li>
+									<li>Marlboro Cross Over</li>
+									<li>Marlboro Never Say Maybe</li>
+									<li>Marlboro Move</li>
+									 
+									<li>Amild Live Wanted</li>
+									<li>Go Ahead People</li>
+									 
+									<li>Umild The Touring</li>
+									<li>Umild Unity Team</li>
+								</ul>								
+							</div>
+							<div class="col-md-6">							
+								<p>Contoh Level :</p>
+								<ul>
+									<li>Peserta</li>
+									<li>Kandidat</li>
+									<li>Pemenang</li>
+								</ul>
+							</div>
+						</div>
+						</small>
 					</div>			
 				</div>		
 				<div class="box box-closing">
