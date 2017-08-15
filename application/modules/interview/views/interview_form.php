@@ -637,7 +637,7 @@
 				<div class="box box-closing">
 					<div class="box-body">
 						<h4>Sesi Wawancara via telepon saat ini sudah selesai. Terima kasih banyak atas waktu Mas/Mbak dalam partisipasi aktifnya. Pada tahap ini, sayangnya kandidat belum diperbolehkan untuk mendapatkan sesi tanya – jawab. </h4>
-						<h4>Sesi tanya jawab akan diberikan pada saat Anda lolos untuk mengikuti tahap selanjutnya di (area & tanggal GAC Festival). </h4>
+						<h4>Sesi tanya jawab akan diberikan pada saat Anda lolos untuk mengikuti tahap selanjutnya. </h4>
 						<h4>Mohon tunggu sekitar dua minggu untuk pengumuman semi finalis. Pengumuman semi finalis akan kami beritahukan lewat telepon dan email, sehingga pastikan ponsel Anda aktif pada periode tersebut dan di hari serta jam kerja. </h4>
 						<h4>Apabila Anda  memiliki pertanyaan mengenai follow up proses ini silakan email ke <b>info@goaheadpeople.id</b></h4>
 						<h4>Sekali lagi, Terima kasih banyak dan kami doakan semoga Anda menjadi salah satu pemenang program Go Ahead Challenge. Have a nice day!</h4>
