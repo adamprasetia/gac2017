@@ -19,13 +19,13 @@ class Interview_model extends CI_Model {
 		return $this->db->get()->row();
 	}
 	public function set_callhis($data){
-		$this->db->insert('call_history',$data);		
+		$this->db->insert('call_history',$data);
 	}
 	public function get_call($id){
 		$this->db->where('candidate',$id);
 		$this->db->from('call_history');
 		$this->db->order_by('date','acs');
-		return $this->db->get()->result();		
+		return $this->db->get()->result();
 	}
 	public function count_call($id){
 		$this->db->where('candidate',$id);
@@ -40,7 +40,7 @@ class Interview_model extends CI_Model {
 		$this->db->join('user C','A.interviewer = C.id','left');
 		if($this->user_login['level']==3){
 			$this->db->where('A.interviewer',$this->user_login['id']);
-			$this->db->where('A.audit','0');			
+			$this->db->where('A.audit','0');
 		}
 		$this->db->order_by($this->general->get_order_column('A.ID'),$this->general->get_order_type('desc'));
 		$this->db->limit($this->general->get_limit());
@@ -52,9 +52,9 @@ class Interview_model extends CI_Model {
 		$this->db->from('candidate A');
 		if($this->user_login['level']==3){
 			$this->db->where('A.interviewer',$this->user_login['id']);
-			$this->db->where('A.audit','0');			
+			$this->db->where('A.audit','0');
 		}
-		return $this->db->get()->num_rows();		
+		return $this->db->get()->num_rows();
 	}
 	private function filter(){
 		$data = array();
@@ -68,7 +68,7 @@ class Interview_model extends CI_Model {
 
 		$interviewer = $this->input->get('interviewer');
 		$art_type = $this->input->get('art_type');
-		if($status <> ''){
+		if($status){
 			$data[] = $this->db->where('A.status',$status);
 		}
 		if($search <> ''){
@@ -80,24 +80,24 @@ class Interview_model extends CI_Model {
 		}
 		if($interviewer <> ''){
 			$data[] = $this->db->where('A.interviewer',$interviewer);
-		}		
+		}
 		if($art_type <> ''){
 			$data[] = $this->db->where('A.art_type',$art_type);
-		}		
+		}
 		if($date_from <> '' && $date_to <> ''){
 			$data[] = $this->db->where('A.dist_date >=',format_ymd($date_from));
 			$data[] = $this->db->where('A.dist_date <=',format_ymd($date_to));
-		}		
+		}
 		if($valid <> ''){
 			$data[] = $this->db->where('A.valid',$valid);
-		}		
+		}
 		if($audit <> ''){
 			$data[] = $this->db->where('A.audit',$audit);
-		}		
+		}
 		if($proses <> ''){
 			$data[] = $this->db->where('A.audit',0);
 			$data[] = $this->db->where('A.valid',0);
-		}		
+		}
 
 		return $data;
 	}
@@ -128,7 +128,7 @@ class Interview_model extends CI_Model {
 			$data[$r->id] = $r->name;
 		}
 		return $data;
-	}	
+	}
 	public function city_f2f_dropdown(){
 		$result = $this->db->get('city')->result();
 		$data[''] = '- City F2f -';
@@ -136,7 +136,7 @@ class Interview_model extends CI_Model {
 			$data[$r->id] = $r->city;
 		}
 		return $data;
-	}	
+	}
 	public function get_city_by_id($id){
 		$this->db->where('id',$id);
 		$this->db->limit(1);
@@ -148,7 +148,7 @@ class Interview_model extends CI_Model {
 		}
 	}
 	public function get_city_list(){
-		$result = $this->db->get('city');		
+		$result = $this->db->get('city');
 		if ($result->num_rows() > 0) {
 			return $result->result();
 		}else{
