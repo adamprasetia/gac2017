@@ -118,7 +118,6 @@
 					<h3>Dengan demikian, diharapkan Mas/Mbak dapat menjawab beberapa pertanyaan dari kami.</h3>
 					<h3>Jika Mas/Mbak berhasil menjawab seluruh pertanyaan dengan baik,</h3>
 					<h3>Maka Mas/Mbak akan kami hubungi kembali untuk mengabarkan apabila Mas/Mbak lolos ke tahapan seleksi berikutnya.</h3>
-					<h3>Sebelumnya, saya akan sedikit menggambarkan proses seleksi Go Ahead Challenge atau GAC. Ada 2 tahapan yaitu GAC Festival & GAC Artwarding.</h3>
 					<h3>Tahapan setelah ini adalah GAC Festival, yaitu pameran karya yang telah Mas/Mbak kirimkan & face-to-face interview, yang akan diadakan di </h3>
 					<?php
 						$city_list = $this->interview_model->get_city_list();
@@ -130,7 +129,6 @@
 							echo "</ul>";
 						}
 					?>
-					<h3>Jika lolos maka Mas/Mbak akan disertakan dalam acara GAC Artwarding di Jakarta tanggal 3 Des 2017, dimana Mas/Mbak berkesempatan membuat karya kolaboratif dengan para ahli di bidangnya. Selanjutnya akan dipilih pemenang berdasarkan karya terbaik yang berkesempatan pergi & berkarya di Amerika Serikat selama 1 sampai 3 minggu.</h3>
 					<h3>Apakah Mas/Mbak keberatan atau berhalangan ?</h3>
 					<div class="radio">
 						<label>
@@ -197,22 +195,9 @@
 						</tr>
 					</table>
 					<h4><b>Sebelumnya kami beritahukan bahwa seluruh pembicaraan yang terjadi di telepon ini akan direkam untuk selanjutnya kami jadikan bahan pertimbangan dalam proses pemilihan pemenang.</b></h4>
-					<h4>Perlu kami informasikan bahwa pertanyaan-pertanyaan yang akan kami berikan setelah ini akan lebih menggali informasi lebih jauh mengenai anda.</h4>
-
-<!-- 					<h4>Pertanyaannya akan dibagi menjadi 4 fokus observasi, </h4>
-					<ul>
-						<li><h4>Validation (Keaslian & keabsahan karya yang sudah di submit),</h4></li>
-						<li><h4>Availability (Kesediaan untuk mengikuti proses selanjutnya & untuk pergi ke luar negeri),</h4></li>
-						<li><h4>Interest (Minat serta apa yang akan mereka lakukan apabila memenangkan grand prize)</h4></li>
-						<li><h4>Serta English Proficiency (kelancaran berkomunikasi dalam bahasa Inggris)</h4></li>
-					</ul>
- -->
 				</div>
 			</div>
 			<div class="box-tanya-jawab-1 hide">
-				<div class="alert alert-danger">
-					Sesi Tanya Jawab A – Keabsahan karya yang di submit oleh kandidat
-				</div>
 				<div class="box box-plagiat">
 					<div class="box-body">
 						<h3>1. Apa karya yang Mas/Mbak submit ke program Go Ahead Challenge dengan judul <b><?php echo $candidate->art_title ?></b> merupakan karya asli anda & bukan plagiat ?</h3>
@@ -272,9 +257,6 @@
 				</div>
 				<div class="box box-signature-ya hide">
 					<div class="box-body">
-						<h4>Terima kasih banyak atas semua jawaban dari pertanyaan yang telah kami berikan, semua jawaban dari Mas/ Mbak telah kami rekam dan kami catat.</h4>
-						<h4>Setelah ini kami akan melanjutkan ke sesi berikutnya.</h4>
-						<h4>Pertanyaan yang akan kami ajukan berikutnya adalah <b>Kesediaan Anda untuk mengikuti proses seleksi</b></h4>
 					</div>
 				</div>
 				<div class="box box-signature-tidak box-danger hide">
@@ -285,9 +267,6 @@
 				</div>
 			</div>
 			<div class="box-tanya-jawab-3 hide">
-				<div class="alert alert-danger">
-					Sesi Tanya Jawab B – Kesediaan kandidat untuk mengikuti proses seleksi
-				</div>
 				<div class="box box-facetoface">
 					<div class="box-body">
 						<h3>1. Apabila Anda terpilih untuk melanjutkan ke tahap seleksi berikutnya, yaitu face-to-face interview di : </h3>
@@ -436,16 +415,6 @@
 				</div>
 			</div>
 			<div class="box-tanya-jawab-5 hide">
-				<div class="box box-closing-c">
-					<div class="box-body">
-						<h4>Terima kasih banyak atas semua jawaban dari pertanyaan yang telah Mas/Mbak berikan, semua jawaban dari Mas/Mbak telah kami rekam dan kami catat.</h4>
-						<h4>Setelah ini kami akan melanjutkan ke sesi berikutnya.</h4>
-						<h4>Pertanyaan yang akan kami ajukan berikutnya adalah <b>Trivia Quiz</b></h4>
-					</div>
-				</div>
-				<div class="alert alert-danger">
-					Sesi Tanya Jawab C – Trivia Quiz
-				</div>
 				<div class="box box-trivia">
 					<div class="box-body">
 						<h3>1. Apabila Anda terpilih menjadi pemenang grand prize Go Ahead Challenge ke <?php echo $grandprize ?>, Apakah Anda akan semangat dan excited dalam mengikuti semua kegiatannya ? <b>Go Ahead Experience</b> apa yang akan Anda lakukan ?</h3>
@@ -464,9 +433,6 @@
 						<h4>Setelah ini kami akan melanjutkan ke sesi berikutnya.</h4>
 						<h4>Pertanyaan yang akan kami ajukan berikutnya adalah <b>mengenai kefasihan kemampuan berbahasa Inggris Anda</b></h4>
 					</div>
-				</div>
-				<div class="alert alert-danger">
-					Sesi Tanya Jawab D – Kemampuan berbahasa Inggris
 				</div>
 				<div class="box box-english1">
 					<div class="box-body">
